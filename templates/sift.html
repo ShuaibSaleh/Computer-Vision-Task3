@@ -1,0 +1,59 @@
+{% extends "index.html" %}
+
+
+{%block content %}
+
+<div class="row">
+
+    <div class="column" id="imagesCol">
+        <div class="images" id="input_images">
+                <div class="imagediv1" class="input-group mb-3" >
+                    <div id="imageA"></div>
+                    <div class="input-group mb-3">
+                    <input type="file"  class="form-control" id="imageA_input" accept="image/*" required="required">
+                    </div>
+            
+                </div>
+
+                <div class="imagediv2">
+                    <div id="imageB"></div>
+                    <div class="input-group mb-3">
+                        <input type="file"  class="form-control" id="imageB_input" accept="image/*" required="required">
+                    </div>
+        
+                </div>
+        </div>
+    </div>
+    
+
+    
+    
+    
+        
+    <div class="column" id="controlCol">
+            <div id="controll_container">
+                <button id="submit_btn" class="btn btn-outline-dark">Result</button>
+            </div>
+        
+        
+    </div>
+
+
+    <div class="column" id="imagesCol">
+        <div class="images" >
+            <div class="imagediv3" id="imagediv3">
+                <div id="imageC"></div>
+            
+
+            </div>
+        
+        </div>
+    </div>
+
+
+</div>
+
+<script  src="{{ url_for('static', filename='js/sift.js') }}"></script>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sift.css') }}">
+{% endblock %}

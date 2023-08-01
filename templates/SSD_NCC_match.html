@@ -1,0 +1,74 @@
+{% extends "index.html" %}
+
+
+{%block content %}
+
+<div class="row">
+
+    <div class="column" id="imagesCol">
+        <div class="images" id="input_images">
+                <div class="imagediv1" class="input-group mb-3" >
+                    <div id="imageA"></div>
+                    <div class="input-group mb-3">
+                    <input type="file"  class="form-control" id="imageA_input" accept="image/*" required="required">
+                    </div>
+            
+                </div>
+
+                <div class="imagediv2">
+                    <div id="imageB"></div>
+                    <div class="input-group mb-3">
+                        <input type="file"  class="form-control" id="imageB_input" accept="image/*" required="required">
+                    </div>
+        
+                </div>
+        </div>
+    </div>
+    
+
+    
+    
+    
+        
+    <div class="column" id="controlCol">
+
+        <label for="method"  style="
+        font-size: 17px;
+        height: fit-content;
+        text-align: center; 
+        font-style: italic;  font-weight: bold;">Choose Method:</label>
+                <select name="method" id="method" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option value=0>SSD</option>
+                    <option value=1>NCC</option>
+                </select>
+
+        
+        
+            
+
+            <div id="controll_container">
+                <button id="submit_btn" class="btn btn-outline-dark">Result</button>
+            </div>
+        
+        
+    </div>
+
+
+    <div class="column" id="imagesCol">
+        <div class="images" >
+            <div class="imagediv3" id="imagediv3">
+                <div id="imageC"></div>
+                <br><br>
+                <div id="info1"></div>
+            
+
+            </div>
+        
+        </div>
+    </div>
+
+
+</div>
+
+<script  src="{{ url_for('static', filename='js/SSD_NCC_match.js') }}"></script>
+{% endblock %}
